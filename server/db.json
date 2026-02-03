@@ -1,0 +1,349 @@
+{
+  "users": [
+    {
+      "id": "user-1770107852677",
+      "name": "PRINCE KUMAR",
+      "email": "rajprincemth2018@gmail.com",
+      "password": null,
+      "emailNotifications": true,
+      "deploymentAlerts": true,
+      "createdAt": "2026-02-03T08:37:32.678Z"
+    }
+  ],
+  "sites": [
+    {
+      "id": "dab91155-8587-406f-976e-d20a67b26984",
+      "userId": "user-1768486515467",
+      "name": "amazon",
+      "repoUrl": "https://github.com/princeyad-ui/Amazon-frontend-",
+      "url": "http://localhost:5000/sites/dab91155-8587-406f-976e-d20a67b26984",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-22T06:31:50.207Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-22T06:31:50.209Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-22T06:31:52.604Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-22T06:31:52.605Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-22T06:31:52.606Z"
+        }
+      ],
+      "createdAt": "2026-01-22T06:31:50.205Z"
+    },
+    {
+      "id": "4eb6c080-a9c1-402e-b88c-fbd45737ed70",
+      "userId": "user-1768486515467",
+      "name": "food1",
+      "repoUrl": "https://github.com/princeyad-ui/Food-website",
+      "url": "http://localhost:5000/sites/4eb6c080-a9c1-402e-b88c-fbd45737ed70",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-22T06:45:17.635Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-22T06:45:17.636Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-22T06:45:19.547Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-22T06:45:19.547Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-22T06:45:19.548Z"
+        }
+      ],
+      "createdAt": "2026-01-22T06:45:17.632Z"
+    },
+    {
+      "id": "485e4696-60af-41c3-8bff-316fb4e3ae67",
+      "userId": "user-1768486515467",
+      "name": "food 2",
+      "repoUrl": "https://github.com/princeyad-ui/Food-website",
+      "url": "http://localhost:5000/sites/485e4696-60af-41c3-8bff-316fb4e3ae67",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:22.603Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:22.605Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:24.554Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:24.555Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:24.555Z"
+        }
+      ],
+      "createdAt": "2026-01-22T07:04:22.601Z"
+    },
+    {
+      "id": "6ca9e622-2361-445f-a795-8ca65c531373",
+      "userId": "user-1768486515467",
+      "name": "food3",
+      "repoUrl": "https://github.com/princeyad-ui/Food-website",
+      "url": "http://localhost:5000/sites/6ca9e622-2361-445f-a795-8ca65c531373",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:46.399Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:46.400Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:48.440Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:48.441Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-22T07:04:48.443Z"
+        }
+      ],
+      "createdAt": "2026-01-22T07:04:46.398Z"
+    },
+    {
+      "id": "8779410e-2504-4dfa-922d-803895d9f85e",
+      "userId": "user-1768486515467",
+      "name": "food4",
+      "repoUrl": "https://github.com/princeyad-ui/Food-website",
+      "url": "http://localhost:5000/sites/8779410e-2504-4dfa-922d-803895d9f85e",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-22T07:13:45.856Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-22T07:13:45.859Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-22T07:13:47.877Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-22T07:13:47.879Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-22T07:13:47.880Z"
+        }
+      ],
+      "createdAt": "2026-01-22T07:13:45.853Z",
+      "storageMB": 0.01
+    },
+    {
+      "id": "d596d81d-ef8c-4dc0-af6c-45c7a1a39e57",
+      "userId": "user-1769779925872",
+      "name": "gaurav.com",
+      "repoUrl": "https://github.com/princeyad-ui/AI-Proctor",
+      "url": "http://localhost:5000/sites/d596d81d-ef8c-4dc0-af6c-45c7a1a39e57",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-01-30T13:32:41.330Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-01-30T13:32:41.332Z"
+        },
+        {
+          "step": "Building project",
+          "status": "Running",
+          "time": "2026-01-30T13:32:46.614Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-01-30T13:34:36.222Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-01-30T13:34:36.223Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-01-30T13:34:36.224Z"
+        }
+      ],
+      "createdAt": "2026-01-30T13:32:41.326Z",
+      "storageMB": 40
+    },
+    {
+      "id": "1330ba99-2005-499f-9ef7-2dbc0c3928f6",
+      "userId": "user-1",
+      "name": "food",
+      "repoUrl": "https://github.com/princeyad-ui/Food-website",
+      "url": "http://localhost:5000/sites/1330ba99-2005-499f-9ef7-2dbc0c3928f6",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-02-03T07:20:00.535Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-02-03T07:20:00.536Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-02-03T07:20:02.880Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-02-03T07:20:02.881Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-02-03T07:20:02.882Z"
+        }
+      ],
+      "createdAt": "2026-02-03T07:20:00.531Z",
+      "storageMB": 40
+    },
+    {
+      "id": "02c825a9-5d56-4e03-9550-1be0b7c2dd85",
+      "userId": "user-1",
+      "name": "ama",
+      "repoUrl": "https://github.com/princeyad-ui/amazon-frontend",
+      "url": "http://localhost:5000/sites/02c825a9-5d56-4e03-9550-1be0b7c2dd85",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-02-03T08:14:10.293Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-02-03T08:14:10.295Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-02-03T08:14:12.766Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-02-03T08:14:12.767Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-02-03T08:14:12.769Z"
+        }
+      ],
+      "createdAt": "2026-02-03T08:14:10.288Z",
+      "storageMB": 40
+    },
+    {
+      "id": "d1346844-3702-46a5-8782-e650d372ad46",
+      "userId": "user-1770107852677",
+      "name": "amazon",
+      "repoUrl": "https://github.com/princeyad-ui/amazon-frontend",
+      "url": "http://localhost:5000/sites/d1346844-3702-46a5-8782-e650d372ad46",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-02-03T08:38:09.600Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-02-03T08:38:09.603Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-02-03T08:38:12.394Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-02-03T08:38:12.396Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-02-03T08:38:12.399Z"
+        }
+      ],
+      "createdAt": "2026-02-03T08:38:09.597Z",
+      "storageMB": 40
+    }
+  ]
+}

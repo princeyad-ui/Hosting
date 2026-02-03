@@ -1,0 +1,21 @@
+.landing {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.landing h1 {
+  font-size: 42px;
+}
+
+.landing p {
+  color: #555;
+  margin: 20px 0;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}

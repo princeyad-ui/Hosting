@@ -1,0 +1,168 @@
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(600px at 50% 10%, rgba(56,189,248,0.15), transparent),
+    #020617;
+  padding: 24px;
+  color: #e5e7eb;
+}
+
+/* ===============================
+   LOGIN CARD
+================================ */
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 36px 34px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 25px 50px rgba(0,0,0,0.65);
+  animation: fadeUp 0.45s ease;
+}
+
+/* ===============================
+   BRAND
+================================ */
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-brand h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #38bdf8;
+}
+
+.login-brand p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ===============================
+   INPUTS
+================================ */
+
+.login-card input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 18px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.login-card input::placeholder {
+  color: #64748b;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.25);
+}
+
+/* ===============================
+   PASSWORD + EYE
+================================ */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 46px;
+}
+
+.eye-btn {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.eye-btn:hover {
+  color: #38bdf8;
+}
+
+/* ===============================
+   LOGIN BUTTON
+================================ */
+
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 4px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 12px;
+  color: #020617;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  box-shadow: 0 12px 30px rgba(56,189,248,0.35);
+}
+
+/* ===============================
+   GOOGLE LOGIN
+================================ */
+
+.google-login {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===============================
+   ERROR
+================================ */
+
+.error {
+  margin-bottom: 16px;
+  padding: 10px;
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.4);
+  border-radius: 10px;
+  color: #fecaca;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

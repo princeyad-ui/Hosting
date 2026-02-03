@@ -1,0 +1,148 @@
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 24px;
+}
+
+/* ===============================
+   Payment Warning Banner
+   =============================== */
+.payment-warning {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #7f1d1d;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.payment-warning strong {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.payment-warning a {
+  color: #fef2f2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.payment-warning a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===============================
+   Stats Cards
+   =============================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* CARD */
+.stats-card {
+  background: #020617;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  transition: all 0.25s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+}
+
+/* HEADER */
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-title {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stats-icon {
+  color: #2563eb;
+}
+
+/* VALUE (THIS IS THE IMPORTANT PART) */
+.stats-value {
+  margin-top: 14px;
+  font-size: 34px;       /* matches screenshot */
+  font-weight: 800;
+  color: #e5e7eb;
+  line-height: 1.2;
+}
+
+
+
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.site-card {
+  background: #020617;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  transition: all 0.25s ease;
+}
+
+.site-card:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+}
+
+.site-card h3 {
+  color: #e5e7eb;
+}
+
+.site-card a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.site-status {
+  color: #64748b;
+  margin: 12px 0 20px;
+}
+
+.visit-link {
+  color: #2563eb;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
