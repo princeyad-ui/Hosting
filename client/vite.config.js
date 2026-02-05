@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "./",
+  base: "/", // ✅ FIXED
   plugins: [react()],
   build: {
     outDir: "dist",
@@ -11,7 +11,6 @@ export default defineConfig({
     sourcemap: false,
   },
   server: {
-    // ✅ Fix CORS and security headers for dev server
     cors: {
       origin: "http://localhost:5000",
       credentials: true,
