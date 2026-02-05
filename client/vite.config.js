@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// Force fresh build - clear Netlify cache
 export default defineConfig({
   base: "/",
   plugins: [react()],
