@@ -19,6 +19,7 @@ const corsOptions = {
   "http://127.0.0.1:5173",
   "http://127.0.0.1:3000",
   "https://hosting-01.netlify.app", // ✅ production frontend
+  "https://hosting-s1hz.onrender.com", // ✅ Allow self-requests for API
 ],
 
   credentials: true,
@@ -30,15 +31,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ✅ Security Headers (Fix COOP issue)
-// ✅ Security Headers (skip Google Auth routes)
 app.use((req, res, next) => {
-  // Allow Google OAuth popup communication
-  if (req.path.startsWith("/api/auth")) {
-    return next();
-  }
-
+  // Allow Google OAuth popup communication (CRITICAL for OAuth to work)
   res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
-  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+  res.setHeader("Cross-Origin-Embedder-Policy", "credentialless");
   next();
 });
 

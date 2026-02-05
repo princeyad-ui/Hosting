@@ -1,4 +1,5 @@
-const API = "http://localhost:5000/api";
+import { API } from "../utils/api";
+
 
 /**
  * Opens Razorpay & resolves after payment success
