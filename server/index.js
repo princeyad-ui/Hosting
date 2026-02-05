@@ -14,11 +14,13 @@ const app = express();
 // ✅ Enhanced CORS Configuration
 const corsOptions = {
   origin: [
-    "http://localhost:5173", // Vite dev server
-    "http://localhost:3000",
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1:3000",
-  ],
+  "http://localhost:5173",
+  "http://localhost:3000",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:3000",
+  "https://hosting-01.netlify.app", // ✅ production frontend
+],
+
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -38,6 +40,12 @@ app.use(express.json());
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 const DEPLOY_DIR = path.join(__dirname, "deployments");
+// ✅ Ensure deployments directory exists (REQUIRED for Render)
+if (!fs.existsSync(DEPLOY_DIR)) {
+  fs.mkdirSync(DEPLOY_DIR, { recursive: true });
+  console.log("📁 deployments directory created at runtime");
+}
+
 
 /* ===============================
    API ROUTES
@@ -583,6 +591,8 @@ app.post("/api/test-email", async (req, res) => {
 /* ===============================
    START SERVER
 ================================ */
-app.listen(5000, () => {
-  console.log("🚀 Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
