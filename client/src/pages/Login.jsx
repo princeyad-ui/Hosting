@@ -6,6 +6,20 @@ import { API } from "../utils/api";
 
 import "../styles/login.css";
 
+// ✅ CRITICAL: Override API for production if needed
+const GOOGLE_API_URL = (() => {
+  if (typeof window !== "undefined") {
+    const hostname = window.location.hostname;
+    if (hostname.includes("netlify") || hostname.includes("hosting-01")) {
+      return "https://hosting-s1hz.onrender.com/api/auth/google";
+    }
+  }
+  return `${API}/auth/google`;
+})();
+
+console.log("🔐 Google Auth URL:", GOOGLE_API_URL);
+console.log("📡 API Base:", API);
+
 
 
 export default function Login() {
@@ -86,7 +100,7 @@ export default function Login() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               try {
-                const res = await fetch(`${API}/auth/google`, {
+                const res = await fetch(GOOGLE_API_URL, {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({
