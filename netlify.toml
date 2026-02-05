@@ -1,0 +1,7 @@
+[build]
+  base = "client"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  VITE_API_URL = "https://hosting-s1hz.onrender.com"
