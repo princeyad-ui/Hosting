@@ -344,6 +344,80 @@
       ],
       "createdAt": "2026-02-03T08:38:09.597Z",
       "storageMB": 40
+    },
+    {
+      "id": "0a6582d4-4544-4632-b700-98b7eeb2486f",
+      "userId": "user-1770107852677",
+      "name": "game",
+      "repoUrl": "https://github.com/princeyad-ui/Tic-Tac-Toe",
+      "url": "http://localhost:5000/sites/0a6582d4-4544-4632-b700-98b7eeb2486f",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-02-05T05:36:51.193Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-02-05T05:36:51.195Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-02-05T05:36:52.963Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-02-05T05:36:52.964Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-02-05T05:36:52.965Z"
+        }
+      ],
+      "createdAt": "2026-02-05T05:36:51.191Z",
+      "storageMB": 40
+    },
+    {
+      "id": "df3ba24f-7ce0-4dbd-9dd4-fa0996132fc3",
+      "userId": "user-1770107852677",
+      "name": "pdf",
+      "repoUrl": "https://github.com/princeyad-ui/ConvertX",
+      "url": "http://localhost:5000/sites/df3ba24f-7ce0-4dbd-9dd4-fa0996132fc3",
+      "status": "Live",
+      "logs": [
+        {
+          "step": "Initializing",
+          "status": "Complete",
+          "time": "2026-02-05T05:37:25.808Z"
+        },
+        {
+          "step": "Cloning repository",
+          "status": "Complete",
+          "time": "2026-02-05T05:37:25.810Z"
+        },
+        {
+          "step": "Deploying",
+          "status": "Complete",
+          "time": "2026-02-05T05:37:58.392Z"
+        },
+        {
+          "step": "Cleanup",
+          "status": "Complete",
+          "time": "2026-02-05T05:37:58.393Z"
+        },
+        {
+          "step": "Post-processing",
+          "status": "Complete",
+          "time": "2026-02-05T05:37:58.394Z"
+        }
+      ],
+      "createdAt": "2026-02-05T05:37:25.805Z",
+      "storageMB": 40
     }
   ]
 }

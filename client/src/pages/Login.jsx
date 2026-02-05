@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import { GoogleLogin } from "@react-oauth/google";
+import { API } from "../utils/api";
 
 import "../styles/login.css";
 
-const API = "http://localhost:5000/api";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");

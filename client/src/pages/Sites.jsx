@@ -2,8 +2,10 @@ import Layout from "../components/Layout";
 import { ExternalLink, Globe, Copy, RefreshCw, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import "../styles/sites.css";
+import { API } from "../utils/api";
 
-const API = "http://localhost:5000/api";
+
+
 
 export default function Sites() {
   const [sites, setSites] = useState([]);

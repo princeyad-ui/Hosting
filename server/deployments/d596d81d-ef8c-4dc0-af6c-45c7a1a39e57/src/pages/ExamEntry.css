@@ -1,0 +1,428 @@
+/* Overall page */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* 🔥 TRUE FULL-SCREEN BACKGROUND */
+.exam-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* keep content above bg */
+.exam-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+.exam-page {
+  max-width: 960px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 24px 16px 40px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+    
+}
+
+/* Top bar */
+.exam-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.exam-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.exam-candidate {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.exam-topbar-right {
+  text-align: right;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.exam-question-count {
+  margin-bottom: 2px;
+}
+
+.exam-timer strong {
+  font-size: 14px;
+}
+
+/* Progress */
+.exam-progress {
+  margin-bottom: 18px;
+}
+
+.exam-progress-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.exam-progress-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.2s ease;
+}
+
+.exam-progress-meta {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Step label */
+.exam-step-indicator {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* Center step cards */
+.exam-step-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Step cards */
+.exam-step-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px 18px;
+  box-sizing: border-box;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.exam-step-narrow {
+  max-width: 480px;
+}
+
+.exam-step-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.exam-step-text {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Inputs */
+.exam-label {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  color: #374151;
+}
+
+.exam-input {
+  width: 100%;
+  padding: 8px 9px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.exam-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+.exam-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 8px 9px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  resize: vertical;
+}
+
+.exam-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.exam-btn-primary {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.exam-btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.exam-btn-secondary {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #111827;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.exam-btn-ghost {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.exam-btn-ghost:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.exam-step-btn {
+  margin-top: 14px;
+}
+
+/* Actions row */
+.exam-actions-row {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.exam-actions-right {
+  margin-left: auto;
+}
+
+/* System check video */
+.exam-video-wrapper {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.exam-video-preview {
+  width: 260px;
+  height: 180px;
+  background: #000;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.exam-video-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Status list */
+.exam-status-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.exam-status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.exam-status-icon {
+  font-size: 16px;
+}
+
+.exam-status-label {
+  font-size: 14px;
+}
+
+.exam-status-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 24px;
+}
+
+/* Instructions */
+.exam-info-block {
+  font-size: 14px;
+  color: #374151;
+}
+
+.exam-info-block p {
+  margin: 0 0 4px 0;
+}
+
+.exam-instruction-list {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4b5563;
+  padding-left: 20px;
+}
+
+/* Test screen */
+.exam-test-wrapper {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.exam-test-inner {
+  width: 100%;
+  max-width: 820px;
+}
+
+.exam-question-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 20px 18px 18px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.exam-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.exam-question-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.exam-question-timer {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.exam-submitted-text {
+  color: #dc2626;
+}
+
+.exam-question-text {
+  font-size: 16px;
+  color: #111827;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Options */
+.exam-options {
+  margin-top: 4px;
+}
+
+.exam-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.exam-option input[type="radio"] {
+  margin: 0;
+}
+
+.exam-option-selected {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+/* Test actions buttons */
+.exam-test-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.exam-test-actions-left {
+  display: flex;
+  gap: 8px;
+}
+
+.exam-test-finish {
+  margin-left: auto;
+}
+
+/* Loading */
+.exam-loading {
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .exam-page {
+    padding: 16px 10px 24px;
+  }
+
+  .exam-question-card {
+    padding: 16px 14px 14px;
+  }
+
+  .exam-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .exam-topbar-right {
+    text-align: left;
+  }
+
+  .exam-step-card {
+    background: rgba(255, 255, 255, 0.9);
+  
+  }
+}

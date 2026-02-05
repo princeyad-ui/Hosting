@@ -1,11 +1,14 @@
 const path = require("path");
 const fs = require("fs");
-const { exec } = require("child_process");
+const { execFile } = require("child_process");
+const { promisify } = require("util");
 const simpleGit = require("simple-git");
 const { v4: uuidv4 } = require("uuid");
 const { readDB, writeDB } = require("../utils/db");
 const { enforceBilling } = require("../services/billing-check.service"); // ✅ ADD BILLING
 const emailService = require("../services/email.service"); // ✅ ADD EMAIL
+
+const execAsync = promisify(execFile);
 
 const DEPLOY_DIR = path.join(__dirname, "../deployments");
 
@@ -122,18 +125,52 @@ exports.deployReactApp = async (req, res) => {
     updateStatus(siteId, "Building");
     addLog(siteId, "Building project", "Running");
 
-    exec("npm install && npm run build", { cwd: projectRoot, timeout: 120000 }, async (err, stdout, stderr) => {
-      console.log("🔨 Build output:", stdout);
+    try {
+      // ✅ Step 1: npm install
+      console.log(`\n📦 Installing dependencies in ${projectRoot}...`);
+      addLog(siteId, "npm install", "Running");
       
-      if (err) {
-        console.error("❌ Build error:", stderr || err.message);
+      try {
+        await execAsync("npm", ["install", "--production=false"], {
+          cwd: projectRoot,
+          timeout: 180000,
+          maxBuffer: 10 * 1024 * 1024,
+        });
+        console.log("✅ npm install completed");
+        addLog(siteId, "npm install", "Complete");
+      } catch (installErr) {
+        console.error("❌ npm install error:", installErr.stderr || installErr.message);
         updateStatus(siteId, "Failed");
-        addLog(siteId, "Build failed", "Failed");
-        return res.status(500).json({ error: "Build failed", details: stderr || err.message });
+        addLog(siteId, "npm install failed", "Failed");
+        return res.status(500).json({ 
+          error: "npm install failed", 
+          details: installErr.stderr || installErr.message 
+        });
       }
 
-      console.log("✅ Build successful");
+      // ✅ Step 2: npm run build
+      console.log(`\n🔨 Building project in ${projectRoot}...`);
+      addLog(siteId, "npm run build", "Running");
       
+      try {
+        const buildResult = await execAsync("npm", ["run", "build"], {
+          cwd: projectRoot,
+          timeout: 180000,
+          maxBuffer: 10 * 1024 * 1024,
+        });
+        console.log("🔨 Build output:", buildResult.stdout);
+        console.log("✅ Build successful");
+        addLog(siteId, "npm run build", "Complete");
+      } catch (buildErr) {
+        console.error("❌ Build error:", buildErr.stderr || buildErr.message);
+        updateStatus(siteId, "Failed");
+        addLog(siteId, "npm run build failed", "Failed");
+        return res.status(500).json({ 
+          error: "Build failed", 
+          details: buildErr.stderr || buildErr.message 
+        });
+      }
+
       /* ✅ FIXED PART (IMPORTANT) */
       const sourceDist = path.join(projectRoot, "dist");
       const finalDist = path.join(sitePath, "dist");
@@ -155,7 +192,9 @@ exports.deployReactApp = async (req, res) => {
       }
 
       // clean old dist
-      fs.rmSync(finalDist, { recursive: true, force: true });
+      if (fs.existsSync(finalDist)) {
+        fs.rmSync(finalDist, { recursive: true, force: true });
+      }
 
       // copy correct dist
       console.log("📋 Copying dist from", sourceDist, "to", finalDist);
@@ -206,7 +245,19 @@ exports.deployReactApp = async (req, res) => {
         siteId,
         url,
       });
-    });
+    } catch (buildProcessError) {
+      console.error("❌ Build process error:", buildProcessError.message);
+      updateStatus(siteId, "Failed");
+      addLog(siteId, "Build process failed", "Failed");
+      
+      try {
+        await emailService.sendDeploymentNotification(siteId, name || "Your React App", "failed");
+      } catch (e) {
+        console.error("Email send error:", e?.message || e);
+      }
+      
+      return res.status(500).json({ error: "Build process failed", details: buildProcessError.message });
+    }
 
   } catch (err) {
     console.error("REACT DEPLOY ERROR:", err);

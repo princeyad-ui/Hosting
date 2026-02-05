@@ -3,6 +3,8 @@ import StatsCard from "../components/StatsCard";
 import SiteCard from "../components/SiteCard";
 import { useEffect, useState } from "react";
 import "../styles/dashboard.css";
+import { API } from "../utils/api";
+
 
 export default function Dashboard() {
   const [sites, setSites] = useState([]);
@@ -13,7 +15,7 @@ export default function Dashboard() {
   ================================ */
   const fetchSites = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/sites", {
+      const res = await fetch(`${API}/sites`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -38,7 +40,7 @@ export default function Dashboard() {
   ================================ */
   const fetchStorageInfo = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/user/storage-info", {
+      const res = await fetch(`${API}/user/storage-info`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

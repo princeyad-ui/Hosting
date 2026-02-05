@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
+import { API } from "../utils/api";
+
 import { User, Bell, Shield, Trash2, AlertCircle, CheckCircle } from "lucide-react";
 import "../styles/settings.css";
 
-const API = "http://localhost:5000/api";
+
 
 export default function Settings() {
   const [savedUser, setSavedUser] = useState({

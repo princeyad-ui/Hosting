@@ -1,10 +1,12 @@
 import Layout from "../components/Layout";
 import { Github, Rocket } from "lucide-react";
 import { useEffect, useState } from "react";
+import { API, BACKEND } from "../utils/api";
+
 import "../styles/deploy.css";
 import { payForDeployment, verifyPaymentWithBackend } from "../services/payment.service";
 
-const API = "http://localhost:5000/api";
+  
 
 export default function Deploy() {
   const [projectName, setProjectName] = useState("");
@@ -55,7 +57,7 @@ async function deploySite() {
         
         // After payment success, deployment continues
         setSiteId(data.siteId);
-        setSuccessUrl(data.url || `http://localhost:5000/sites/${data.siteId}`);
+        setSuccessUrl(data.url || `${BACKEND}/sites/${data.siteId}`);
         alert("Payment successful! Your site is being deployed...");
       } catch (paymentError) {
         alert("Payment failed: " + paymentError.message);

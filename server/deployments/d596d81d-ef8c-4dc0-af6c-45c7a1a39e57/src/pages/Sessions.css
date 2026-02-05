@@ -1,0 +1,103 @@
+/* Sessions.css */
+.sessions-bg {
+  width: 100%;
+}
+
+
+.sessions-page { padding: 28px 0; max-width: 1100px; margin: 0 auto; }
+.sessions-header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 14px; gap:12px; }
+.sessions-header h1 { margin:0; font-size:24px; color:#0b2447; }
+.muted { color:#6b7280; }
+
+.session-list { display: grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.session-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(10,20,40,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 160px;
+}
+
+.session-meta { font-size: 13px; color: #234; display:flex; flex-direction:column; gap:4px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:12px; color:#333; }
+
+.session-thumbs { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:6px; }
+.thumb {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius:6px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(10,20,40,0.06);
+  border: 2px solid #fff;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.thumb:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(10,20,40,0.09); }
+
+.no-thumb { color:#6b7280; padding:8px; background:#f4f6f9; border-radius:6px; }
+
+.session-actions { display:flex; gap:8px; align-items:center; margin-top:auto; }
+.btn1 {
+  background:#0073e6; color:#fff; padding:8px 12px; border-radius:8px; border:0; cursor:pointer; font-weight:600;
+}
+.link-btn { color:#0073e6; text-decoration:none; font-weight:600; margin-left:6px; }
+
+.modal-backdrop {
+  position: fixed; inset:0; background: rgba(10,20,40,0.55); display:flex; align-items:center; justify-content:center; z-index:2000;
+}
+.modal {
+  width: 90%; max-width:1100px; background:#fff; border-radius:10px; padding:12px; display:flex; gap:12px; box-shadow:0 18px 50px rgba(0,0,0,0.4);
+}
+.modal-left { flex:1 1 60%; display:flex; align-items:center; justify-content:center; }
+.modal-img { max-width:100%; max-height:70vh; border-radius:6px; object-fit:contain; }
+.modal-right { width:340px; overflow:auto; padding:8px; border-left:1px solid #f0f2f6; }
+.events-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+.events-list li { padding:8px; border-radius:8px; background:#fbfdff; box-shadow: 0 6px 16px rgba(10,20,40,0.03); }
+.ev-type { font-weight:700; color:#063b6a; font-size:13px; }
+.ev-details { color:#6b7280; font-size:13px; margin-top:4px; }
+.ev-time { color:#94a3b8; font-size:12px; margin-top:6px; }
+
+@media (max-width:880px){
+  .modal { flex-direction:column; width:95%; }
+  .modal-right { width:100%; border-left: none; border-top:1px solid #f0f2f6; padding-top:12px; }
+}
+/* Sessions.css — add these */
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+/* container that scrolls */
+.events-scroll {
+  max-height: 340px;      /* adjust as needed */
+  overflow: auto;
+  padding-right: 8px;     /* give room for scrollbar */
+  border: 1px solid #f0f4f8;
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* keep individual event styling (optional) */
+.events-list {
+  margin: 0;
+  padding-left: 12px;
+  list-style: none;
+}
+.events-list li {
+  padding: 8px 6px;
+  border-bottom: 1px solid #f3f6f9;
+}
+.badge {
+  background: #e53935;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+

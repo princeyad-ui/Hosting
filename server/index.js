@@ -30,11 +30,18 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ✅ Security Headers (Fix COOP issue)
+// ✅ Security Headers (skip Google Auth routes)
 app.use((req, res, next) => {
+  // Allow Google OAuth popup communication
+  if (req.path.startsWith("/api/auth")) {
+    return next();
+  }
+
   res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
   res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
   next();
 });
+
 
 app.use(express.json());
 app.use(express.urlencoded({ limit: "10mb", extended: true }));

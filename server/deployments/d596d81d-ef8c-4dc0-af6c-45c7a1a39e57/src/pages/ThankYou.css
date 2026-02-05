@@ -1,0 +1,90 @@
+/* src/pages/ThankYou.css */
+/* Global fixed background */
+/* Full-page background */
+.app-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1; /* keeps background behind content */
+}
+
+.ty-container {
+  width: 100%;
+  min-height: 100vh;
+ background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ty-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.06);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.ty-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.ty-heading {
+  font-size: 32px;
+  margin-bottom: 4px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.ty-student-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.ty-subtitle {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.ty-desc {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.ty-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ty-btn:hover {
+  background: #1e4fd8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
