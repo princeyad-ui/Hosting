@@ -4,6 +4,11 @@ const path = require("path");
 const fs = require("fs");
 require("dotenv").config();
 
+// ✅ Set production backend URL for deployed sites
+if (process.env.NODE_ENV !== 'development' && !process.env.BACKEND_URL) {
+  process.env.BACKEND_URL = "https://hosting-s1hz.onrender.com";
+}
+
 const deployRoutes = require("./routes/deploy.routes");
 const siteRoutes = require("./routes/siteRoutes");
 const BuildManager = require("./utils/buildManager");

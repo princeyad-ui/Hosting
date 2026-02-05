@@ -187,7 +187,7 @@ if (billingResult.requiresPayment) {
 }
 
 
-    const url = `http://localhost:5000/sites/${siteId}`;
+    const url = `${process.env.BACKEND_URL || 'http://localhost:5000'}/sites/${siteId}`;
 
     updateStatus(siteId, "Live", url);
 
@@ -253,7 +253,7 @@ for (const item of fs.readdirSync(sitePath)) {
       });
     }
 
-    const url = `http://localhost:5000/sites/${siteId}`;
+    const url = `${process.env.BACKEND_URL || 'http://localhost:5000'}/sites/${siteId}`;
     updateStatus(siteId, "Live", url);
 
     addLog(siteId, "Deploying", "Complete");

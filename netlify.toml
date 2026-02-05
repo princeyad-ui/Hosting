@@ -5,3 +5,4 @@
 
 [build.environment]
   VITE_API_URL = "https://hosting-s1hz.onrender.com"
+  NODE_ENV = "production"
